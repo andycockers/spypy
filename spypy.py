@@ -12,7 +12,7 @@ try:
                while True:
                              if GPIO.input(PIR_PIN):
                                              print("Motion Detected")
-                              time.sleep(1)
+               time.sleep(1)
 except KeyboardInterrupt:
                print("Quit")
                GPIO.cleanup()
