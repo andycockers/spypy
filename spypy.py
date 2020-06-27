@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
 PIR = 4
-GPIO.setup(PIR_PIN, GPIO.IN)
+GPIO.setup(PIR, GPIO.IN)
 
 #  Directory Path
 Base_Dir = os.path.dirname(os.path.realpath(__file__)) + '/'
