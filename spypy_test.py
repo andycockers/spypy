@@ -5,6 +5,7 @@ import os
 from configparser import ConfigParser
 import RPi.GPIO as GPIO
 from picamera import PiCamera
+from time import sleep
 
 GPIO.setmode(GPIO.BCM)
 PIR = 4
