@@ -11,6 +11,9 @@ GPIO.setmode(GPIO.BCM)
 PIR = 4
 GPIO.setup(PIR, GPIO.IN)
 
+output_folder = "home/pi"
+file_name = "capture.jpg"
+
 def getNextFilePath(output_folder):
     highest_num = 0
     for f in os.listdir(output_folder):
@@ -30,4 +33,4 @@ camera = PiCamera()
 camera.resolution = (1024, 768)
 
 sleep(2)
-camera.capture(getNextFilePath("capture.jpg"))
+camera.capture(getNextFilePath())
