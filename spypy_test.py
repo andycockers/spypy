@@ -30,4 +30,4 @@ camera = PiCamera()
 camera.resolution = (1024, 768)
 
 sleep(2)
-camera.capture(getNextFilePath("/home/pi/capture.jpg"))
+camera.capture(getNextFilePath("capture.jpg"))
