@@ -22,13 +22,13 @@ camera.resolution = (1024, 768)
 
 try:
                print("Monitoring")
-               time.sleep(2)
+               time.sleep(1)
                print("Ready")
                while True:
                              if GPIO.input(PIR):
                                              print("Motion detected, capturing image")
                                              camera.capture(filename)
-                             time.sleep(2)
+                             time.sleep(1)
 except KeyboardInterrupt:
                print(" Quit")
                GPIO.cleanup()
