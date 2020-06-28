@@ -29,6 +29,7 @@ try:
                                              print("Motion detected, capturing image")
                                              time.sleep(1)
                                              camera.capture(filename)
+                                             filename.close()
                                              time.sleep(1)
                              time.sleep(1)
 except KeyboardInterrupt:
