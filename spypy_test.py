@@ -20,7 +20,7 @@ filename = filename.format(counter)
 camera = PiCamera()
 camera.resolution = (1024, 768)
 
-try:               print("PIR Module Test (CTRL+C to exit)")
+try:           print("PIR Module Test (CTRL+C to exit)")
                time.sleep(2)
                print("Ready")
                while True:
