@@ -20,5 +20,16 @@ filename = filename.format(counter)
 camera = PiCamera()
 camera.resolution = (1024, 768)
 
-sleep(2)
-camera.capture(filename)
+try:               print("PIR Module Test (CTRL+C to exit)")
+               time.sleep(2)
+               print("Ready")
+               while True:
+                             if GPIO.input(PIR_PIN):
+                                             print("Motion Detected, capturing image")
+                                             camera.capture(filename)
+               time.sleep(1)
+except KeyboardInterrupt:
+               print("Quit")
+               GPIO.cleanup()
+#sleep(2)
+#camera.capture(filename)
