@@ -20,6 +20,6 @@ def wait():
 with picamera.PiCamera() as camera:
     camera.start_preview()
     wait()
-    for filename in camera.capture_continuous('img{timestamp:%Y-%m-%d-%H-%M}.jpg'):
+    for filename in camera.capture_continuous('img{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print('Captured %s' % filename)
         wait()
