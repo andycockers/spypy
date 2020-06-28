@@ -25,7 +25,7 @@ try:
                time.sleep(2)
                print("Ready")
                while True:
-                             if GPIO.input(PIR_PIN):
+                             if GPIO.input(PIR):
                                              print("Motion detected, capturing image")
                                              camera.capture(filename)
                              time.sleep(1)
