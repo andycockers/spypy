@@ -27,9 +27,8 @@ try:
                while True:
                              if GPIO.input(PIR):
                                              print("Motion detected, capturing image")
-                                             print("More text")
                                              camera.capture(filename)
-                             time.sleep(1)
+                             time.sleep(2)
 except KeyboardInterrupt:
                print(" Quit")
                GPIO.cleanup()
