@@ -22,9 +22,9 @@ while True:
     camera.start_preview()
     time.sleep(1)
     print("Movement Detected, capturing image")
-    camera.capture('img{timestamp:%Y-%m-%d-%H-%M-%S}.jpg')
-    counter = counter + 1
-    camera.stop_preview()
+    for filename in camera.capture('img{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
+        counter = counter + 1
+        camera.stop_preview()
    except:
     camera.stop_preview()
     time.sleep(3)
