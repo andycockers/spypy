@@ -14,13 +14,16 @@ GPIO.setmode(GPIO.BCM)
 PIR = 4
 GPIO.setup(PIR, GPIO.IN)
 
+camera = PiCamera()
+camera.resolution = (1024, 768)
+
 def wait():
     GPIO.input(PIR)
-
-if GPIO.input(PIR):
-    with picamera.PiCamera() as camera:
-        camera.start_preview()
-        wait()
+try:
+ if GPIO.input(PIR):
         for filename in camera.capture_continuous('img{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
             print('Captured %s' % filename)
-            wait()
+            
+except KeyboardInterrupt:
+               print(" Quit")
+               GPIO.cleanup()
