@@ -3,7 +3,7 @@ import time
 from picamera import PiCamera
 GPIO.setmode (GPIO.BCM)
 
-pirPin = 4
+pirPin = 7
 GPIO.setup(pirPin, GPIO.IN)
 camera = PiCamera()
 counter = 1 
