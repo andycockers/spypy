@@ -1,4 +1,6 @@
-import RPi.GPIO as GPIO import time from picamera import PiCamera GPIO.
+import RPi.GPIO as GPIO 
+import time from picamera 
+import PiCamera GPIO.
 setmode (GPIO.BCM)
   pirPin = 4
   GPIO.setup (pirPin, GPIO.IN, GPIO.PUD_UP)
