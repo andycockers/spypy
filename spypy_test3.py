@@ -15,7 +15,6 @@ pirPin = 4
 GPIO.setup(pirPin, GPIO.IN)
 camera = PiCamera()
 counter = 1
-filename = 'image%s.jpg' % counter = counter + 1
 
 while True:
   if GPIO.input(pirPin):
