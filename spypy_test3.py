@@ -4,12 +4,12 @@ from picamera import PiCamera
 GPIO.setmode (GPIO.BCM)
 
 pirPin = 4
-GPIO.setup (pirPin, GPIO.IN, GPIO.PUD_UP)
+GPIO.setup(pirPin, GPIO.IN)
 camera = PiCamera()
 counter = 1 
 
 while True:
-  if GPIO.input (pirPin) == GPIO.LOW:
+  if GPIO.input(pirPin):
    try: 
     camera.start_preview()
     time.sleep(1) 
