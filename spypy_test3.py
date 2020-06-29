@@ -16,13 +16,18 @@ GPIO.setup(pirPin, GPIO.IN)
 camera = PiCamera()
 counter = 1 
 
+filename = "capture{}.jpg"
+while os.path.isfile(filename.format(counter)):
+    counter += 1
+filename = filename.format(counter)
+
 while True:
   if GPIO.input(pirPin):
    try: 
     camera.start_preview()
     time.sleep(1)
     print("Movement Detected, capturing image")
-    camera.capture('image%s.jpg' % counter)
+    camera.capture(filename)
     counter = counter + 1
     camera.stop_preview()
    except:
