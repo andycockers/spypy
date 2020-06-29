@@ -14,7 +14,8 @@ GPIO.setmode (GPIO.BCM)
 pirPin = 4
 GPIO.setup(pirPin, GPIO.IN)
 camera = PiCamera()
-counter = 1 
+counter = 1
+filename = 'image%s.jpg' % counter
 
 while True:
   if GPIO.input(pirPin):
@@ -22,7 +23,7 @@ while True:
     camera.start_preview()
     time.sleep(1)
     print("Movement Detected, capturing image")
-    camera.capture('image%s.jpg' % counter)
+    camera.capture(filename)
     counter = counter + 1
     camera.stop_preview()
    except:
