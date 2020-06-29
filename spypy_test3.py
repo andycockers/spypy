@@ -3,10 +3,11 @@ import time
 from picamera import PiCamera
 GPIO.setmode (GPIO.BCM)
 
-  pirPin = 4
-  GPIO.setup (pirPin, GPIO.IN, GPIO.PUD_UP)
-  camera = PiCamera ()counter = 1 while True
-:
+pirPin = 4
+GPIO.setup (pirPin, GPIO.IN, GPIO.PUD_UP)
+camera = PiCamera ()counter = 1 
+
+while True:
   if GPIO
   .input (pirPin) == GPIO.LOW:
   try: 
