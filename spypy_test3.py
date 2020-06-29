@@ -9,8 +9,7 @@ camera = PiCamera()
 counter = 1 
 
 while True:
-  if GPIO
-  .input (pirPin) == GPIO.LOW:
+  if GPIO.input (pirPin) == GPIO.LOW:
   try: 
     camera.start_preview()
     time.sleep(1) 
