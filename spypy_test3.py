@@ -9,6 +9,7 @@ from configparser import ConfigParser
 import RPi.GPIO as GPIO
 from picamera import PiCamera
 from time import sleep
+GPIO.setmode (GPIO.BCM)
 
 pirPin = 4
 GPIO.setup(pirPin, GPIO.IN)
