@@ -12,7 +12,8 @@ while True:
   if GPIO.input(pirPin):
    try: 
     camera.start_preview()
-    time.sleep(1) 
+    time.sleep(1)
+    print("Movement Detected, capturing image")
     camera.capture('/home/pi/image%s.jpg' % counter)
     counter = counter + 1
     camera.stop_preview()
