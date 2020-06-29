@@ -4,7 +4,7 @@ from picamera import PiCamera
 GPIO.setmode (GPIO.BCM)
 
 pirPin = 7
-GPIO.setup(pirPin, GPIO.IN)
+GPIO.setup(pirPin, GPIO.IN, GPIO.PUD_UP)
 camera = PiCamera()
 counter = 1 
 
