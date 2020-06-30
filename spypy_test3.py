@@ -19,7 +19,7 @@ GPIO.setup(pirPin, GPIO.IN)
 camera = PiCamera()
 counter = 1
 
-filename = datetime.now().strftime("%d-%m-%Y_%I-%M-%S_%p")
+filename = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 
 while True:
   if GPIO.input(pirPin):
