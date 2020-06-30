@@ -19,6 +19,8 @@ GPIO.setup(pirPin, GPIO.IN)
 camera = PiCamera()
 counter = 1
 
+filename = datetime.now().strftime("%d-%m-%Y_%I-%M-%S_%p")
+
 while True:
   if GPIO.input(pirPin):
    try: 
@@ -26,8 +28,8 @@ while True:
     time.sleep(1)
     print("Movement Detected, capturing image")
     #camera.capture('image%s.jpg' % counter)
-    camera.capture(timestr + ".jpg")
-    print(timestr + ".jpg")
+    camera.capture(filename + ".jpg")
+    print(filename + ".jpg")
     #print('image%s.jpg' % counter)
     counter = counter + 1
     camera.stop_preview()
