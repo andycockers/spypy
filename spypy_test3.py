@@ -28,7 +28,7 @@ while True:
     time.sleep(1)
     print("Movement Detected, capturing image")
     #camera.capture('image%s.jpg' % counter)
-    camera.capture(filename + ".jpg")
+    camera.capture('%s.jpg' % filename)
     print(filename + ".jpg")
     #print('image%s.jpg' % counter)
     counter = counter + 1
