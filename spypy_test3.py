@@ -30,9 +30,9 @@ while True:
     print("Movement Detected, capturing image")
     #camera.capture('image%s.jpg' % counter)
     camera.capture('%s.jpg' % datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
-    files_path = os.path.join(folder, '*')
-    files = sorted(
-    glob.iglob(files_path), key=os.path.getctime, reverse=True) 
+    list_of_files = glob.glob('*.jpg') # * means all if need specific format then *.csv
+    latest_file = max(list_of_files, key=os.path.getmtime)
+    print (latest_file)
     print(files[0])
     #print('image%s.jpg' % counter)
     counter = counter + 1
