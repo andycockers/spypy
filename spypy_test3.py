@@ -2,8 +2,8 @@ import time
 import picamera
 from datetime import datetime, timedelta
 
-timestr = time.strftime("%Y%m%d-%H%M%S")
-print(timestr)
+#timestr = time.strftime("%Y%m%d-%H%M%S")
+#print(timestr)
 
 import glob
 import datetime
