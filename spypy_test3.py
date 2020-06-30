@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 timestr = time.strftime("%Y%m%d-%H%M%S")
 print(timestr)
 
+import glob
 import datetime
 import subprocess
 import os
@@ -29,7 +30,10 @@ while True:
     print("Movement Detected, capturing image")
     #camera.capture('image%s.jpg' % counter)
     camera.capture('%s.jpg' % datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
-    print(datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".jpg")
+    files_path = os.path.join(folder, '*')
+    files = sorted(
+    glob.iglob(files_path), key=os.path.getctime, reverse=True) 
+    print(files[0])
     #print('image%s.jpg' % counter)
     counter = counter + 1
     camera.stop_preview()
