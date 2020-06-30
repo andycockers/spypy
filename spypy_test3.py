@@ -3,7 +3,7 @@ import picamera
 from datetime import datetime, timedelta
 
 timestr = time.strftime("%Y%m%d-%H%M%S")
-print timestr
+print(timestr)
 
 import datetime
 import subprocess
