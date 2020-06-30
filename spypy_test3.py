@@ -28,8 +28,8 @@ while True:
     time.sleep(1)
     print("Movement Detected, capturing image")
     #camera.capture('image%s.jpg' % counter)
-    camera.capture('%s.jpg' % filename)
-    print(filename + ".jpg")
+    camera.capture('%s.jpg' % datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
+    print(datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".jpg")
     #print('image%s.jpg' % counter)
     counter = counter + 1
     camera.stop_preview()
