@@ -34,9 +34,11 @@ while True:
     latest_file = max(list_of_files, key=os.path.getmtime)
     print (latest_file)
     print(files[0])
-    #print('image%s.jpg' % counter)
     counter = counter + 1
     camera.stop_preview()
    except:
-    camera.stop_preview()
-    time.sleep(3)
+    KeyboardInterrupt:
+               print(" Quit")
+               camera.stop_preview()
+               GPIO.cleanup()
+               time.sleep(3)
